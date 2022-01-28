@@ -11,7 +11,7 @@ export default function Home() {
         description="A short description goes here."
         additionalMetaTags={[
           {
-            property: "google-site-verification",
+            name: "google-site-verification",
             content: "nJEGnq3JbSOe9SFw4pOQUILq94n4vHlZovKXQ50icfk",
           },
         ]}
