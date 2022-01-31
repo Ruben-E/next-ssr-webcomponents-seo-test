@@ -2,6 +2,17 @@ import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { NextSeo } from "next-seo";
+import dynamic from "next/dynamic";
+
+const Button = dynamic(
+  () =>
+    import("../components/DaltonButton/dalton-button").then(
+      (m) => m.DaltonButtonReact
+    ),
+  {
+    ssr: false,
+  }
+);
 
 export default function Home() {
   return (
@@ -23,6 +34,7 @@ export default function Home() {
         </Head>
 
         <main>
+          <Button>SLOT</Button>
           <Header title="Welcome to my app!" />
           <p className="description">
             Get started by editing <code>pages/index.js</code>
